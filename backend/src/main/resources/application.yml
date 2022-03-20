@@ -1,0 +1,6 @@
+app:
+  datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/university_management_system
+    username: root
+    password: tania12345
+    pool-szie: 30

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Data for Employment</title>
+    <link rel="stylesheet" href="profile-data.css">
+
+</head>
+<body>
+<div class="navbar">
+    <input type="button" value="Logout" class="logout" type="submit" href="#">
+</div>
+<div class="navigation-bar">
+    <div id="navigation-container">
+        <h1 class="logo"></h1>
+        <ul>
+            <li><a href="#"><b>Home</b></a></li>
+            <li><a href="#"><b>Profile Data</b></a></li>
+        </ul>
+    </div>
+</div>
+<div class="profile-pic-div">
+    <img src="https://as1.ftcdn.net/v2/jpg/01/83/55/76/500_F_183557656_DRcvOesmfDl5BIyhPKrcWANFKy2964i9.jpg" id="photo">
+    <input type="file" id="file">
+    <label for="file" id="uploadBtn">Choose Photo</label>
+</div>
+<h2 class="header">Profile Data</h2>
+<div class="profile_data">
+    <table class="profile_table">
+        <tr><td>
+            <label for="fname" class="label" >First Name</label>
+            <output class="input_data" name="fname" id="fname">Aila</output><br>
+        </td></tr>
+        <tr><td>
+            <label for="lname" class="label" >Last Name</label>
+            <output type="text" class="input_data" name="lname" id="lname">Hause</output><br>
+        </td></tr>
+        <tr><td>
+            <label for="faculty_name" class="label" >Faculty Name</label>
+            <output  class="input_data" name="faculty_name" id="faculty_name">Faculty of Engineering</output>
+        </td></tr>
+        <tr><td>
+            <label for="position"  class="label" >Position</label>
+            <output class="input_data" name="position" id="position">Teacher</output>
+        </td></tr>
+        <tr><td>
+            <label for="gender" class="label" >Gender</label>
+            <output type="text" class="input_data" name="gender" id="gender">Female</output><br>
+        </td></tr>
+        <tr><td>
+            <label for="dob" class="label" >Date of Birth</label>
+            <output type="date" class="input_data" name="dob" id="dob">1965-02-09</output><br>
+        </td></tr>
+        <!-- <tr><td>
+          <label for="is_adminitrator" class="label" >Is administrator?</label>
+          <input type="text" class="input_data" name="is_adminitrator" id="is_adminitrator" placeholder=""><br>
+        </td></tr> -->
+    </table>
+    <div>
+        <button class="button" id="button" onclick="myFunction()">Change</button>
+    </div>
+
+</div>
+<script src="profile.js"></script>
+
+
+</body>
+</html>

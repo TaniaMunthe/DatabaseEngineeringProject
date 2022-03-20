@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<cfscript>
+  //existence and type checking
+  param name="FORM.datepicker" type="date";
+  param name="FORM.sTime" type="time";
+  param name="FORM.eTime" type="time";
+  param name="FORM.meeting" type="range" min=5 max=60;//minutes
+  //create currentTimeSlotBegin and lastTimeSlotBegin for cfloop
+  currentTimeSlotBegin = createDateTime(year(FORM.datepicker), month(FORM.datepicker), day(FORM.datepicker), hour(FORM.sTime), minute(FORM.sTime), 0);//this will be incremented, within cfloop, for each time slot
+  lastTimeSlotEnd = createDateTime(year(FORM.datepicker), month(FORM.datepicker), day(FORM.datepicker), hour(FORM.eTime), minute(FORM.eTime), 0);//used only for creating lastTimeSlotBegin below
+  lastTimeSlotBegin = dateAdd("n", FORM.meeting*-1, lastTimeSlotEnd);//subtract meeting length to get beginning of last time slot
+</cfscript>
+<table>
+  <tr>
+    <th>Time Slots for <cfoutput>#dateFormat(FORM.datepicker, "ddd, mmm dd, yyyy")#</cfoutput></th>
+  </tr>
+  <cfloop condition="currentTimeSlotBegin lte lastTimeSlotBegin">
+    <cfset currentTimeSlotEnd = dateAdd("n", FORM.meeting, currentTimeSlotBegin)>
+      <tr>
+        <td><cfoutput>#timeFormat(currentTimeSlotBegin, "hh:nn tt")#-#timeFormat(currentTimeSlotEnd, "hh:nn tt")#</cfoutput></td>
+      </tr>
+      <cfset currentTimeSlotBegin = dateAdd("n", FORM.meeting, currentTimeSlotBegin)>
+  </cfloop>
+</table>
+<body>
+
+</body>
+</html>

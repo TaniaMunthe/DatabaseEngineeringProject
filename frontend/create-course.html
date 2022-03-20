@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create course</title>
+    <link rel="stylesheet" href="create-course.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <input type="button" value="Logout" class="logout" type="submit" href="#">
+    </div>
+    <div class="navigation-bar">
+        <div id="navigation-container">
+            <h1 class="logo"></h1>
+            <ul>
+                <li><a href="#"><b>Home</b></a></li>
+                <li><a href="#"><b>Profile Data</b></a></li>
+                <li><a href="#"><b>Course</b></a></li>
+            </ul>
+        </div>
+    </div>
+    <form class="form" id="newCourse">
+        <ul class="course-info">
+            <label for="faculty_name">Faculty name</label>
+            <input type="text" class="faculty_name" id="faculty_name" placeholder="Faculty Name"><br>
+            <small class="error-message"></small>
+            <label for="department_name">Department name</label>
+            <input type="text" class="department_name" id="department_name" placeholder="Department Name"><br>
+            <small class="error-message"></small>
+            <label for="degree_type">Degree type</label>
+            <input type="text" class="degree_type" id="degree_type" placeholder="Degree type"><br>
+            <small class="error-message"></small>
+        </ul>
+        <h4 class="header">Create Course</h4>
+
+        <div class="sidenav">
+            <a href="#search"><b>Create Course</b></a>
+            <a href="#course-list"><b> Edit Courses</b></a>
+            <a href="#create-timetable"><b>View Course</b></a>
+        </div>
+        <div class="course-list">
+            <table class="table" id="createCourse">
+                <!-- <tr><td>
+                    <label class="label" for="course_id">Course ID:</label>
+                    <input class= "input-course" type="text" name="course_id" id="course_id" placeholder="course ID" ><br>
+                    <small class="error-message"></small>
+                </td></tr> -->
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="course_name">Course name:</label>
+                        <input class= "input-course" type="text" name="course_name" id="course_name" placeholder="Course name"><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td> 
+                    <div class="input-group">
+                        <label class="label" for="teacher_first_name">Teacher:</label>
+                        <input  class= "input-course" type="text" name="teacher" id="teacher_first_name" placeholder="Teacher" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="teacher_last_name">Teacher:</label>
+                        <input  class= "input-course" type="text" name="teacherLn" id="teacher_last_name" placeholder="Teacher" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="course_type">Course type:</label>
+                        <input class= "input-course" type="text" name="course_type" id="course_type" placeholder="Course Type" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="academic_semester">Academic semester:</label>
+                        <input class= "input-course" type="text" name="academic_semester" id="academic_semester" placeholder="Academic semester" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="semester_number">Semester number:</label>
+                        <input class= "input-course" type="text" name="semester_number" id="semester_number" placeholder="Semester number" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="academic_year">Academic year:</label>
+                        <input class= "input-course" type="text" name="Academic_year" id="academic_year" placeholder="Academic year" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="year_of_study">Year of study:</label>
+                        <input class= "input-course" type="text" name="year_of_study" id="year_of_study" placeholder="Year of study" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="total_hours">Total hours:</label>
+                        <input class= "input-course" type="text" name="total_hours" id="total_hours" placeholder=" Total hours" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="total_credits">Total credits:</label>
+                        <input class= "input-course" type="text" name="total_credits" id="total_credits" placeholder=" Total credits" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="duration">Duration:</label>
+                        <input class= "input-course" type="text" name="duration" id="duration" placeholder="Duration"><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td> 
+                    <div class="input-group">
+                        <label class="label" for="date_start">Date start:</label>
+                        <input class= "input-course1" type="date" name="date_start" id="date_start" placeholder="Date start"><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="date_end">Date end:</label>
+                        <input class= "input-course1" type="date" name="date_end" id="date_end" placeholder="Date end"><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="input-group">
+                        <label class="label" for="day">Day:</label>
+                        <input class= "input-course" type="text" name="day" id="day" placeholder="Day" ><br>
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="check-mode">
+                            <label for="course_mode_online">Course mode</label>
+                            <input type="radio" id="course_mode_online" class= "radio_btn" name="rad_group_mode" value=1>
+                            <span class="item-online">Online</span>
+                            <input class="course_mode_stationary" type="radio"  class= "radio_btn" name="rad_group_mode" id="course_mode_stationary" value="2" checked>
+                            <span class="item-stationary">Stationary</span><br>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="list-online1">
+                        <label class="label" for="meeting-link">Link Meeting:</label>
+                        <input class= "input-course" type="text" name="meeting-link" id="meeting-link" placeholder="Link meeting" >
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="list-online2">
+                        <label class="label" for="psw">Classroom number:</label>
+                        <input  class= "input-course" type="password" id="psw" name="password-meeting" placeholder="Password">
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="list-stationary1">
+                        <label class="label" for="classroom-numb">Classroom number:</label>
+                        <input class= "input-course" type="text" name="classroom-numb" id="classroom-numb" placeholder="Classroom number">
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="list-stationary3">
+                        <label class="label" for="building_name"> Building name:</label>
+                        <input class= "input-course" type="text" name="building_name" id="building_name" placeholder="Building name">
+                        <small class="error-message"></small>
+                    </div>
+                </td></tr>
+            </table>
+        </div>
+        <button class="button-save" id="submit" type="submit">Save Course</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="create-course.js"></script>
+</body>
+</html>
